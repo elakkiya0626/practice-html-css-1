@@ -1,3 +1,17 @@
 elakkiya is a lusu grl
 
 
+this is push ad pull command "
+
+
+swtich branch --- git checkout (branch name)
+
+push  : git add .
+        git commit -m "Commit Message"
+        git push origin ---branch name---
+
+pull   :git  fetch
+        git pull origin ---from branch----
+
+        ehtulam dhan basics .... push pull .... dhan main 
+        
