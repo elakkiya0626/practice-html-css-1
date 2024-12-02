@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
+    background-color: black;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
 }
 
-nav {
+
+.header nav {
     min-height: 50px;
     display: flex;
     background-color: rgb(15, 4, 4);
@@ -13,46 +18,61 @@ nav {
     justify-content: space-between; /* Adjusts spacing between elements */
     align-items: center; /* Aligns items vertically centered */
 }
+.menu-option {
+    color: #e0e0e0; /* Light gray for contrast on black */
+    text-decoration: none; /* Ensure underline is removed */
+    font-size: 16px;
+    margin: 0 20px; /* Add space between options */
+    padding: 5px 10px;
+    transition: color 0.9s ease, background-color 0.5s ease;
+}
+
+.menu-option:hover {
+    border-radius: 10px;
+    color: #ffffff; /* Pure white on hover */
+    background-color: #555555; /* Medium gray hover background */
+}
+
+
 
 .menu {  
     padding-right: 200px;
     padding-bottom: 2px;
     padding-left: 100px;
 }
-.searchbar{
+/* .searchbar{
     padding-top:10px ; 
 }
 .searchbar input{
     height: 40px;
     box-sizing: 100px;
     border-radius: 10px;
-}
+} */
 
-li, h1, ul {
+.menu li, h1, ul {
     padding-left: 80px;
     display: inline;
 }
 
-li {
+.menu li {
     color: rgb(174, 174, 174);
     cursor: pointer;
 }
 
-li:hover {
+.menu li:hover {
     color: rgb(255, 255, 255);
 }
 
-.searchbar input {
-    text-align: center;
-    width: 300px;
-    padding-left: 10px;
-}
-
 .box {
-    margin-top: 100px;
+    justify-items: center;
+   
+    column-gap: 100px;
+    color: rgb(255, 255, 255);
+    margin-top: 0px;
     display: inline-block;
 }
 .box img {
+    border-bottom: rgb(255, 255, 255) 1px solid;
     border-radius: 10px;
 
 }
@@ -65,12 +85,10 @@ li:hover {
 }
 
 .box:hover img {
+    border-bottom: rgb(255, 255, 255) 4px solid;
     transform: scale(0.9); 
     opacity: 0.9; 
 }
-
-
-
 .about {
     text-align: center;
     display: inline-block;
@@ -84,12 +102,33 @@ li:hover {
 }
 
 .contact {
-    background-color: black;
+    background-color: hwb(0 0% 100%);
     color: white;
     text-align: center;
     padding-top: 40px;
 }
 
-.contact:hover {
-    cursor: pointer;
+
+
+/*   
+.sidebar {
+    margin-top: 10px;
+    grid-area: sidebar;
+    height: 100%;
+    width: 250px;
+    border-right: 1px solid rgb(255, 255, 255); 
+} */
+.layout {
+    margin-left: 00px;
+    display: grid;
+    grid-template-areas:
+      "sidebar body";
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+.body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+    gap: 20px; /* Adds space between the `.box` elements */
+    grid-area: body;
 }
